@@ -1,7 +1,8 @@
+""" OPPO LAB 1. Using classes. """
 import math
 
 class Figure:
-
+    """ Base class for all figures """
     author: str
     density: float
     typestr = "none"
@@ -12,12 +13,13 @@ class Figure:
 
 
     def get_mass(self):
+        """ Stub for getting mass """
         return None
 
 
 
 class Sphere(Figure):
-
+    """ Sphere class """
     radius: int
     typestr = "sphere"
 
@@ -31,7 +33,7 @@ class Sphere(Figure):
 
 
 class Cuboid(Figure):
-
+    """ Parallelepiped (cuboid for short)"""
     a: int
     b: int
     c: int
@@ -49,7 +51,7 @@ class Cuboid(Figure):
 
 
 class Cylinder(Figure):
-
+    """ Cylinder class """
     r: int
     h: int
     typestr = "cylind"
@@ -65,26 +67,31 @@ class Cylinder(Figure):
 
 
 def print_add_invalid_syntax_warning():
+    """ Prints invalid syntax warn for ADD command """
     print("ERR! Invalid syntax. ADD syntax: ")
     print("ADD -t <type> -d <density> -a <author> [OPTIONAL: (-r <radius>) OR (-A <side_1> -B <side_2> -C <side_3>) OR (-r <radius> -h <height>)] ")
 
 
 def print_invalid_syntax_warning():
+    """ General invalid syntax warn """
     print("ERR! Invalid syntax.")
 
 
 def print_rem_invalid_syntax_warning():
+    """ Prints invalid syntax warn for REM command """
     print("ERR! Invalid syntax. REM syntax: ")
     print("REM ( OPTIONAL: -t [<type>] separated by ',') ( OPTIONAL: -d <density>[>/</=]<value>) ( OPTIONAL: -a [<author>] separated by ',') ( OPTIONAL: -m <density>[>/</=]<value>)")
 
 
 def type_in_list(collection_elem, types: list):
+    """ Checks if collection_elem is in types """
     if collection_elem.typestr in types:
         return True
     return False
 
 
 def auth_in_list(collection_elem, auths: list):
+    """ Checks if collection_elem is in auths """
     if collection_elem.author in auths:
         return True
     return False
