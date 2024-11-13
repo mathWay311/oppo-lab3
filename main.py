@@ -226,6 +226,7 @@ def handle_add_command(args):
 
 
 def handle_rem_command(args):
+    """ Handles REM """
     if (not "-t" in args) and (not "-d" in args) and (not "-a" in args) and (not "-m" in args):
         print_rem_invalid_syntax_warning()
         return
