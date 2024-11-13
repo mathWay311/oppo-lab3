@@ -69,7 +69,8 @@ class Cylinder(Figure):
 def print_add_invalid_syntax_warning():
     """ Prints invalid syntax warn for ADD command """
     print("ERR! Invalid syntax. ADD syntax: ")
-    print("ADD -t <type> -d <density> -a <author> [OPTIONAL: (-r <radius>) OR (-A <side_1> -B <side_2> -C <side_3>) OR (-r <radius> -h <height>)] ")
+    print("ADD -t <type> -d <density> -a <author> [OPTIONAL: (-r <radius>) \
+        OR (-A <side_1> -B <side_2> -C <side_3>) OR (-r <radius> -h <height>)] ")
 
 
 def print_invalid_syntax_warning():
@@ -80,7 +81,10 @@ def print_invalid_syntax_warning():
 def print_rem_invalid_syntax_warning():
     """ Prints invalid syntax warn for REM command """
     print("ERR! Invalid syntax. REM syntax: ")
-    print("REM ( OPTIONAL: -t [<type>] separated by ',') ( OPTIONAL: -d <density>[>/</=]<value>) ( OPTIONAL: -a [<author>] separated by ',') ( OPTIONAL: -m <density>[>/</=]<value>)")
+    print("REM ( OPTIONAL: -t [<type>] separated by ',') \
+        ( OPTIONAL: -d <density>[>/</=]<value>) \
+            ( OPTIONAL: -a [<author>] separated by ',') \
+                ( OPTIONAL: -m <density>[>/</=]<value>)")
 
 
 def type_in_list(collection_elem, types: list):
@@ -309,9 +313,5 @@ while True:
 
         print("Success")
 
-
     else:
         print(">>> Invalid command. Try again")
-
-
-
