@@ -302,32 +302,38 @@ def handle_rem_command(args):
 
     print("Success")
 
-
+'''
 collection.append(Cylinder(10, "mathway", 1, 2))
 collection.append(Cuboid(12, "me", 1, 2, 3))
 collection.append(Sphere(14, "mathway", 33))
 collection.append(Cylinder(10, "mathway", 1, 2))
 collection.append(Cuboid(12, "me", 1, 2, 3))
 collection.append(Sphere(14, "mathway", 33))
+'''
 
-while True:
-    print(">>> ", end="")
-    cmd = input()
+def main_cycle():
+    while True:
+        print(">>> ", end="")
+        cmd = input()
 
-    args = cmd.split(" ")
+        args = cmd.split(" ")
 
-    if args[0] == "PRINT":
-        handle_print_command()
+        if args[0] == "PRINT":
+            handle_print_command()
 
-    elif args[0] == "ADD":
-        try:
-            handle_add_command(args)
-        except:
-            print_add_invalid_syntax_warning()
-            continue
+        elif args[0] == "ADD":
+            try:
+                handle_add_command(args)
+            except:
+                print_add_invalid_syntax_warning()
+                continue
 
-    elif args[0] == "REM":
-        handle_rem_command(args)
+        elif args[0] == "REM":
+            handle_rem_command(args)
 
-    else:
-        print(">>> Invalid command. Try again")
+        else:
+            print(">>> Invalid command. Try again")
+
+
+if __name__ == '__main__':
+    main_cycle()
